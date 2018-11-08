@@ -1,0 +1,6 @@
+{
+	"compilerOptions": {
+		"baseUrl": "src"
+	},
+	"babelCssModulesHash": "[name]__[local]____[hash:base64:6]"
+}

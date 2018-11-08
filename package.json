@@ -1,0 +1,87 @@
+{
+	"name": "REDACTED",
+	"version": "2.0.0",
+	"description": "REDACTED",
+	"main": "entry.js",
+	"scripts": {
+		"test": "jest",
+		"eslint": "cross-env NODE_ENV=production eslint src",
+		"eslint-dev": "cross-env NODE_ENV=development eslint src",
+		"analyze": "cross-env NODE_ENV=production+analyze webpack --progress",
+		"dev": "cross-env NODE_ENV=development webpack-dev-server --progress",
+		"build": "cross-env NODE_ENV=production webpack --progress",
+		"build-prod": "cross-env NODE_ENV=production webpack --progress && npm run tinify",
+		"tinify": "node build_config/tinify.js",
+		"sheet": "node build_config/sync_pagelang.js"
+	},
+	"keywords": [],
+	"author": "REDACTED",
+	"license": "ISC",
+	"dependencies": {
+		"@babel/polyfill": "^7.0.0",
+		"axios": "^0.18.0",
+		"babel-plugin-react-css-modules": "^3.4.2",
+		"history": "^4.7.2",
+		"pixi.js": "^4.8.0",
+		"react": "^16.4.0",
+		"react-dom": "^16.4.0",
+		"react-redux": "^5.0.7",
+		"redux": "^4.0.0",
+		"redux-batched-actions": "^0.4.1",
+		"redux-logger": "^3.0.6",
+		"redux-thunk": "^2.3.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.0.0-beta.49",
+		"@babel/plugin-proposal-async-generator-functions": "^7.0.0-beta.49",
+		"@babel/plugin-proposal-class-properties": "^7.0.0-beta.49",
+		"@babel/plugin-proposal-nullish-coalescing-operator": "^7.0.0-beta.49",
+		"@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.49",
+		"@babel/plugin-proposal-optional-chaining": "^7.0.0-beta.49",
+		"@babel/preset-env": "^7.0.0-beta.49",
+		"@babel/preset-react": "^7.0.0-beta.49",
+		"@babel/register": "^7.0.0-beta.49",
+		"babel-core": "^7.0.0-bridge.0",
+		"babel-eslint": "=8.2.1",
+		"babel-jest": "^23.0.1",
+		"babel-loader": "^8.0.0-beta.3",
+		"copy-webpack-plugin": "^4.5.1",
+		"css-loader": "^0.28.11",
+		"enzyme": "^3.3.0",
+		"enzyme-adapter-react-16": "^1.1.1",
+		"eslint": "^4.19.1",
+		"eslint-plugin-babel": "^5.1.0",
+		"eslint-plugin-import": "^2.12.0",
+		"eslint-plugin-react": "^7.8.2",
+		"extract-text-webpack-plugin": "^4.0.0-beta.0",
+		"file-loader": "^1.1.11",
+		"html-webpack-plugin": "^3.2.0",
+		"jest": "^23.1.0",
+		"postcss-global-import": "^1.0.6",
+		"postcss-import": "^11.1.0",
+		"postcss-loader": "^2.1.5",
+		"postcss-node-sass": "=2.1.4",
+		"postcss-scss": "^2.0.0",
+		"promise-memoize": "^1.2.1",
+		"redux-mock-store": "^1.5.1",
+		"responsive-loader": "^1.1.0",
+		"sharp": "^0.20.5",
+		"tinify": "^1.6.0-beta.2",
+		"webpack": "^4.10.2",
+		"webpack-bundle-analyzer": "^2.13.1",
+		"webpack-cli": "^3.0.3",
+		"webpack-dev-server": "^3.1.4"
+	},
+	"quokka": {
+		"babel": true,
+		"env": {
+			"params": {
+				"env": "NODE_PATH=./src"
+			}
+		}
+	},
+	"eslintIgnore": [
+		"node_modules",
+		"!.eslintrc.js"
+	]
+}
