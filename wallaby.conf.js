@@ -21,7 +21,7 @@ module.exports = (wallabyJS) => ({
 	},
 
 	compilers: {
-		'**/*.jsx?': wallabyJS.compilers.babel(require('./.babelrc.js'))
+		'**/*.js?(x)': wallabyJS.compilers.babel(require('./.babelrc.js'))
 	},
 
 	testFramework: 'jest',
